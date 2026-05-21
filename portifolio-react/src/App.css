@@ -1,19 +1,376 @@
-body {
-  background: transparent;
-  color: white;
-  overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #070816;
 }
 
+body {
+  color: white;
+  font-family: "Sora", sans-serif;
+  overflow-x: hidden;
+}
+
+/* PARTICLES */
+
+#tsparticles {
+  position: fixed !important;
+  inset: 0;
+  z-index: 0 !important;
+}
+
+/* MAIN */
+
 main {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   z-index: 1;
 }
 
-h1 {
-  font-size: 4rem;
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 80px;
+  background: transparent;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+
+  top: 30px;
+  right: 60px;
+
+  display: flex;
+  gap: 30px;
+
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+/* HERO */
+
+.hero-intro {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* TEXTO CENTRAL */
+
+.hero-center-text {
+  position: relative;
+
+  z-index: 5;
+
+  text-align: center;
+
+  max-width: 800px;
+
+  opacity: 0;
+
+  transform: translateY(24px);
+
+  animation: textAppear 1s ease forwards;
+}
+
+.hero-center-text h1 {
+  margin: 0;
+
+  font-size: clamp(56px, 8vw, 110px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: white;
+}
+
+.hero-center-text h2 {
+  margin-top: 22px;
+
+  font-size: clamp(20px, 2vw, 32px);
+
+  font-weight: 500;
+
+  color: #d4d4d8;
+}
+
+.hero-center-text p {
+  margin: 22px auto 0;
+
+  max-width: 540px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #a1a1aa;
+}
+
+/* CARD */
+
+.floating-contact {
+  position: absolute;
+
+  top: 10%;
+  left: 0.2%;
+
+  width: 260px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(88, 28, 135, 0.55),
+    rgba(30, 10, 60, 0.75)
+  );
+
+  border: 1px solid rgba(192, 132, 252, 0.35);
+
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 0 35px rgba(126, 34, 206, 0.25);
+
+  opacity: 0;
+
+  animation:
+    contactSlide 1.2s ease forwards,
+    floatCard 4s ease-in-out infinite;
+
+  animation-delay: 1.6s, 3.2s;
+}
+
+/* BOTÃO */
+
+.floating-projects-btn {
+  position: absolute;
+
+  right:2%;
+  bottom: 16%;
+
+  width: fit-content;
+
+  padding: 16px 34px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #c084fc,
+    #9333ea
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  animation:
+  buttonSlide 1.2s ease forwards,
+  floatButton 4s ease-in-out infinite 1.2s;
+
+  animation-delay: 1.6s;
+
+  transition: 0.3s;
+}
+
+.floating-projects-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 25px rgba(192, 132, 252, 0.6);
+}
+
+/* CARD LABEL */
+
+.card-label {
+  margin: 0;
+
+  color: #c084fc;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+/* ÍCONES */
+
+.hero-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.hero-icons a {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(192, 132, 252, 0.12);
+
+  border: 1px solid rgba(192, 132, 252, 0.25);
+
+  color: #d8b4fe;
+
+  font-size: 18px;
+
+  transition: 0.3s;
+}
+
+.hero-icons a:hover {
+  transform: translateY(-5px);
+
+  color: white;
+
+  box-shadow:
+    0 0 20px rgba(192, 132, 252, 0.7);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes textAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARD -> DIREITA */
+
+@keyframes contactSlide {
+  from {
+    opacity: 0;
+
+    left: 30%;
+
+    transform:
+      translateX(50%)
+      scale(0.92);
+
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    left: 2%;
+
+    transform:
+      translateX(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+/* BOTÃO -> ESQUERDA */
+
+@keyframes buttonSlide {
+  from {
+    opacity: 0;
+
+    right: 40%;
+
+    transform:
+      translateX(-50%)
+      scale(0.92);
+
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    right: 2%;
+
+    transform:
+      translateX(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+/* FLOAT */
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating-contact {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.floating-contact:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02);
+
+  border-color:
+    rgba(216, 180, 254, 0.7);
+
+  box-shadow:
+    0 0 35px rgba(192, 132, 252, 0.45),
+    0 0 80px rgba(126, 34, 206, 0.25);
+}
+
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }

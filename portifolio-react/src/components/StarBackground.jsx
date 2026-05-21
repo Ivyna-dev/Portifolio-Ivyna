@@ -18,7 +18,7 @@ export default function StarBackground() {
 
         fullScreen: {
           enable: true,
-          zIndex: -1,
+          zIndex: 0,
         },
 
         fpsLimit: 60,
