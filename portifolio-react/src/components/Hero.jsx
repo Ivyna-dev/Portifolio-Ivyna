@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 import {
   FaGithub,
   FaLinkedinIn,
@@ -8,13 +10,30 @@ export default function Hero() {
   return (
     <div className="hero hero-intro">
       <div className="hero-center-text">
-        <h1>IVYNA SOUSA</h1>
+        
+        <motion.h1
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          IVYNA SOUSA
+        </motion.h1>
 
-        <h2>Front-end Developer & UI Designer</h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45 }}
+        >
+          Front-end Developer & UI Designer
+        </motion.h2>
 
-        <p>
+        <motion.p
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
           Criando interfaces modernas, intuitivas e funcionais.
-        </p>
+        </motion.p>
       </div>
 
       <div className="floating-contact">
