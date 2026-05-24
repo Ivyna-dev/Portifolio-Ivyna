@@ -1,7 +1,7 @@
 import StarBackground from "./components/StarBackground"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import Contact from "./components/Contact"
+import Skills from "./components/Skills"
 import "./App.css"
 
 function App() {
@@ -85,10 +85,18 @@ function App() {
             </div>
           </div>
         </section>
+          <section id="skills" className="skills-section">
+  <div className="skills-title">
+    <p className="section-label">Habilidades</p>
 
-        <section id="contact">
-          <Contact />
-        </section>
+    <h2>
+      Tecnologias e ferramentas utilizadas no desenvolvimento
+      de interfaces modernas.
+    </h2>
+  </div>
+
+  <Skills />
+</section>
       </main>
     </>
   )

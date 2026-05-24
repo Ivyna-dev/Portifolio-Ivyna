@@ -763,3 +763,225 @@ background-position: -60% center, center;
   }
 }
 
+.skills-section {
+  min-height: 100vh;
+  padding: 120px 8%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 70px;
+}
+
+.skills-title {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-title h2 {
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1.1;
+  color: white;
+  margin-top: 14px;
+}
+
+.orbit-scene {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  height: 430px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 900px;
+  transform-style: preserve-3d; 
+  overflow: visible;
+}
+
+.center-card {
+  position: relative;
+  transform: translateZ(0px); 
+
+  width: 260px;
+  height: 220px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 40px rgba(255, 255, 255, 0.08),
+    0 0 70px rgba(168, 85, 247, 0.12);
+}
+
+.center-card h3 {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.orbit-system {
+  position: absolute;
+  width: 360px;
+  height: 220px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+
+  pointer-events: none;
+}
+
+.orbit-skill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 10px 10px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  word-spacing: -3px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 18px rgba(168, 85, 247, 0.22);
+
+  animation: orbitDepth 14s linear infinite;
+}
+
+.skill-1 {
+  animation-delay: 0s;
+}
+
+.skill-2 {
+  animation-delay: -2.3s;
+}
+
+.skill-3 {
+  animation-delay: -4.6s;
+}
+
+.skill-4 {
+  animation-delay: -6.9s;
+}
+
+.skill-5 {
+  animation-delay: -9.2s;
+}
+
+.skill-6 {
+  animation-delay: -11.5s;
+}
+
+@keyframes orbitDepth {
+  0% {
+    transform: translate(-50%, -50%) rotateY(0deg) translateZ(180px) scale(1.12);
+    opacity: 1;
+    filter: blur(0);
+    z-index: 10;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotateY(180deg) translateZ(180px) scale(0.55);
+    opacity: 0;
+    filter: blur(2px);
+  }
+
+  65% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateY(360deg) translateZ(180px) scale(1.12);
+    opacity: 1;
+    filter: blur(0);
+    z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 100px 6%;
+  }
+
+  .orbit-scene {
+    height: 360px;
+  }
+
+  .center-card {
+    width: 220px;
+    height: 190px;
+  }
+
+  .center-card h3 {
+    font-size: 23px;
+  }
+
+  .orbit-system {
+    width: 300px;
+    height: 190px;
+  }
+
+  .orbit-skill {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  @keyframes orbitDepth {
+  0% {
+    transform: translate(-50%, -50%) translateX(180px) scale(1.1);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translate(-50%, -50%) translateX(0px) scale(1.05);
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateX(-180px) scale(0.45);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  75% {
+    transform: translate(-50%, -50%) translateX(0px) scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateX(180px) scale(1.1);
+    opacity: 1;
+  }
+}
+}

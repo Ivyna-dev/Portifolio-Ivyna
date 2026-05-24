@@ -1,7 +1,7 @@
 export default function Projects() {
   return (
-    <div>
-      Projetos
-    </div>
+    <button className="floating-projects-btn">
+      Ver Projetos
+    </button>
   )
 }

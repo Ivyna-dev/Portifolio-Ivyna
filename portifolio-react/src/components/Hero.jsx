@@ -1,10 +1,7 @@
 import { motion } from "framer-motion"
-
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaBehance,
-} from "react-icons/fa"
+import Skills from "./Skills"
+import Contact from "./Contact"
+import Projects from "./Projects"
 
 export default function Hero() {
   return (
@@ -36,19 +33,8 @@ export default function Hero() {
         </motion.p>
       </div>
 
-      <div className="floating-contact">
-        <p className="card-label">Contato</p>
-
-        <div className="hero-icons">
-          <a href="#"><FaGithub /></a>
-          <a href="#"><FaLinkedinIn /></a>
-          <a href="#"><FaBehance /></a>
-        </div>
-      </div>
-
-      <button className="floating-projects-btn">
-        Ver Projetos
-      </button>
+      <Contact />
+      <Projects />
     </div>
   )
 }
