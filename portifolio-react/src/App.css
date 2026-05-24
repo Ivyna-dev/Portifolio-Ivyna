@@ -15,15 +15,11 @@ body {
   overflow-x: hidden;
 }
 
-/* PARTICLES */
-
 #tsparticles {
   position: fixed !important;
   inset: 0;
   z-index: 0 !important;
 }
-
-/* MAIN */
 
 main {
   position: relative;
@@ -32,12 +28,9 @@ main {
 
 section {
   width: 100%;
-  min-height: 100vh;
-  padding: 100px 80px;
+  padding: 80px 80px;
   background: transparent;
 }
-
-/* NAVBAR */
 
 .navbar {
   position: fixed;
@@ -100,8 +93,6 @@ section {
   width: 100%;
 }
 
-/* HERO */
-
 .hero-intro {
   position: relative;
   min-height: 100vh;
@@ -110,8 +101,6 @@ section {
   justify-content: center;
   overflow: visible;
 }
-
-/* TEXTO CENTRAL */
 
 .hero-center-text {
   position: absolute;
@@ -185,8 +174,6 @@ background-position: -60% center, center;
   color: #a1a1aa;
 }
 
-/* CARD */
-
 .floating-contact {
   position: absolute;
 
@@ -224,8 +211,6 @@ background-position: -60% center, center;
 
   animation-delay: 1.6s, 3.2s;
 }
-
-/* BOTÃO */
 
 .floating-projects-btn {
   position: absolute;
@@ -271,8 +256,6 @@ background-position: -60% center, center;
     0 0 25px rgba(192, 132, 252, 0.6);
 }
 
-/* CARD LABEL */
-
 .card-label {
   margin: 0;
 
@@ -285,7 +268,6 @@ background-position: -60% center, center;
   letter-spacing: 1.5px;
 }
 
-/* ÍCONES */
 
 .hero-icons {
   display: flex;
@@ -322,16 +304,12 @@ background-position: -60% center, center;
     0 0 20px rgba(192, 132, 252, 0.7);
 }
 
-/* ANIMAÇÕES */
-
 @keyframes textAppear {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
-/* CARD -> DIREITA */
 
 @keyframes contactSlide {
   from {
@@ -359,8 +337,6 @@ background-position: -60% center, center;
   }
 }
 
-/* BOTÃO -> ESQUERDA */
-
 @keyframes buttonSlide {
   from {
     opacity: 0;
@@ -386,8 +362,6 @@ background-position: -60% center, center;
     filter: blur(0);
   }
 }
-
-/* FLOAT */
 
 @keyframes floatCard {
   0%,
@@ -444,3 +418,348 @@ background-position: -60% center, center;
 #home {
   padding-top: 0;
 }
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  animation: revealOnScroll linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 35%;
+}
+
+@keyframes revealOnScroll {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-section {
+  min-height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 38px;
+  padding: 120px 80px;
+}
+
+.about-title {
+  max-width: 900px;
+}
+
+.about-title h2 {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: clamp(38px, 5vw, 72px);
+
+  line-height: 1.05;
+
+  color: white;
+}
+
+.about-content {
+  max-width: 900px;
+
+  padding: 48px;
+
+  border-radius: 32px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(88, 28, 135, 0.28),
+    rgba(24, 24, 37, 0.55)
+  );
+
+  border: 1px solid rgba(192, 132, 252, 0.25);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 45px rgba(126, 34, 206, 0.18);
+}
+
+.section-label {
+  margin: 0 0 18px;
+
+  color: #c084fc;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-content {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-family: "Outfit", sans-serif;
+
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.05;
+
+  color: white;
+}
+
+.about-content p {
+  margin-top: 26px;
+
+  max-width: 720px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: #a1a1aa;
+}
+
+.about-tags {
+  margin-top: 34px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.about-tags span {
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(192, 132, 252, 0.12);
+
+  border: 1px solid rgba(192, 132, 252, 0.25);
+
+  color: #d8b4fe;
+
+  font-size: 14px;
+}
+
+.about-flip-card {
+  width: 100%;
+  max-width: 700px;
+  height: 520px;
+
+  perspective: 1200px;
+
+  animation: idleRotate 7s ease-in-out infinite;
+}
+
+.about-flip-inner {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  transform-style: preserve-3d;
+
+  transition: transform 1.2s ease;
+}
+
+.about-flip-card:hover {
+  animation-play-state: paused;
+}
+
+.about-flip-card:hover .about-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.about-card {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+
+  border-radius: 32px;
+
+  overflow: hidden;
+}
+
+
+.about-card-animate {
+  animation: aboutCardFloat 2.2s ease;
+  animation-delay: 2s;
+}
+
+.about-front {
+  padding: 56px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(88, 28, 135, 0.28),
+    rgba(24, 24, 37, 0.55)
+  );
+
+  border: 1px solid rgba(192, 132, 252, 0.25);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 45px rgba(126, 34, 206, 0.18);
+}
+
+.about-back {
+  transform: rotateY(180deg);
+
+  border: 1px solid rgba(192, 132, 252, 0.35);
+
+  overflow: hidden;
+}
+
+.about-back img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.projects-section {
+  position: relative;
+
+  padding: 120px 80px 500px;
+}
+
+.projects-title {
+  margin-bottom: 80px;
+}
+
+.projects-stack {
+   position: relative;
+
+  padding-bottom: 300px;
+}
+
+.project-card {
+  position: sticky;
+
+  top: 140px;
+
+  height: 280px;
+
+  padding: 42px;
+
+  border-radius: 32px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(88, 28, 135, 0.22),
+    rgba(24, 24, 37, 0.72)
+  );
+
+  border: 1px solid rgba(192, 132, 252, 0.18);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 40px rgba(126, 34, 206, 0.12);
+
+  margin-bottom: 150px;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.project-card:nth-child(1) {
+  top: 110px;
+}
+
+.project-card:nth-child(2) {
+  top: 210px;
+}
+
+.project-card:nth-child(3) {
+  top: 310px;
+}
+
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(216, 180, 254, 0.45);
+}
+
+.project-card h3 {
+  margin: 0 0 18px;
+
+  font-size: 32px;
+
+  font-family: "Outfit", sans-serif;
+
+  color: white;
+}
+
+@keyframes introFlip {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  45% {
+    transform: rotateY(12deg) scale(1.01);
+  }
+
+  70% {
+    transform: rotateY(-6deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes aboutCardFloat {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  25% {
+    transform: rotateY(18deg) scale(1.02);
+  }
+
+  55% {
+    transform: rotateY(-12deg);
+  }
+
+  80% {
+    transform: rotateY(6deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes idleRotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  8% {
+    transform: rotateY(16deg);
+  }
+
+  14% {
+    transform: rotateY(-10deg);
+  }
+
+  20% {
+    transform: rotateY(6deg);
+  }
+
+  26% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
