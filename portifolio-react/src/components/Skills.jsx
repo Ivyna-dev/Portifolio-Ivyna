@@ -8,10 +8,15 @@ export default function Skills() {
         <span className="orbit-skill skill-4">UI Design</span>
         <span className="orbit-skill skill-5">CSS</span>
         <span className="orbit-skill skill-6">GitHub</span>
+        <span className="orbit-skill skill-7">HTML</span>
+        <span className="orbit-skill skill-8">Canva</span>
       </div>
 
       <div className="center-card">
-        <h3>Tech Stack</h3>
+        <h3>
+          <span>Tech</span>
+          <span>Stack</span>
+        </h3>
       </div>
     </div>
   )

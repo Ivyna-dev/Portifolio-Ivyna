@@ -827,6 +827,11 @@ background-position: -60% center, center;
   color: white;
   font-size: 26px;
   font-weight: 700;
+
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 116px;
 }
 
 .orbit-system {
@@ -894,7 +899,7 @@ background-position: -60% center, center;
 
 @keyframes orbitDepth {
   0% {
-    transform: translate(-50%, -50%) rotateY(0deg) translateZ(180px) scale(1.12);
+    transform: translate(-50%, -50%) rotateY(0deg) translateZ(150px) scale(1.12);
     opacity: 1;
     filter: blur(0);
     z-index: 10;
@@ -905,7 +910,7 @@ background-position: -60% center, center;
   }
 
   50% {
-    transform: translate(-50%, -50%) rotateY(180deg) translateZ(180px) scale(0.55);
+    transform: translate(-50%, -50%) rotateY(180deg) translateZ(150px) scale(0.55);
     opacity: 0;
     filter: blur(2px);
   }
@@ -915,7 +920,7 @@ background-position: -60% center, center;
   }
 
   100% {
-    transform: translate(-50%, -50%) rotateY(360deg) translateZ(180px) scale(1.12);
+    transform: translate(-50%, -50%) rotateY(360deg) translateZ(150px) scale(1.12);
     opacity: 1;
     filter: blur(0);
     z-index: 10;
