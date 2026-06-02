@@ -1,13 +1,10 @@
 import { motion } from "framer-motion"
-import Skills from "./Skills"
 import Contact from "./Contact"
-import Projects from "./Projects"
 
 export default function Hero() {
   return (
     <div className="hero hero-intro">
       <div className="hero-center-text">
-        
         <motion.h1
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,7 +31,10 @@ export default function Hero() {
       </div>
 
       <Contact />
-      <Projects />
+
+      <a href="#projects" className="floating-projects-btn">
+        Ver Projetos
+      </a>
     </div>
   )
 }

@@ -51,40 +51,71 @@ function App() {
         </section>
 
         <section id="projects" className="projects-section">
-          <div className="projects-title">
-            <p className="section-label">Projetos</p>
+  <div className="projects-title">
+    <p className="section-label">Projetos</p>
 
-            <h2>
-              Projetos que unem design, experiência e desenvolvimento.
-            </h2>
-          </div>
+    <h2>
+      Projetos que unem design, experiência e desenvolvimento.
+    </h2>
+  </div>
 
-          <div className="projects-stack">
-            <div className="project-card">
-              <h3>Portal Universitário</h3>
-              <p>
-                Plataforma acadêmica com foco em navegação intuitiva e
-                experiência do usuário.
-              </p>
-            </div>
+  <div className="projects-stack">
+    <div className="project-card">
+      <h3>Portal Universitário</h3>
 
-            <div className="project-card">
-              <h3>E-commerce UI</h3>
-              <p>
-                Interface moderna para loja virtual com design responsivo e
-                minimalista.
-              </p>
-            </div>
+      <p>
+        Plataforma acadêmica com foco em navegação intuitiva e
+        experiência do usuário.
+      </p>
 
-            <div className="project-card">
-              <h3>Dashboard Analytics</h3>
-              <p>
-                Painel administrativo com visual tecnológico e gráficos
-                interativos.
-              </p>
-            </div>
-          </div>
-        </section>
+      <a
+        href="https://www.figma.com/design/b0VA4XJDgdmWuQcl5PbD39/UniJornal?node-id=0-1&t=YjvKtPaACJ87el4f-1"
+        target="_blank"
+        rel="noreferrer"
+        className="project-github-btn"
+      >
+        Ver no Figma
+      </a>
+    </div>
+
+    <div className="project-card">
+      <h3>E-commerce UI</h3>
+
+      <p>
+        Interface moderna para loja virtual com design responsivo e
+        minimalista.
+      </p>
+
+      <a
+        href="https://github.com/Ivyna-dev/Loja-roupas"
+        target="_blank"
+        rel="noreferrer"
+        className="project-github-btn"
+      >
+        Ver no GitHub
+      </a>
+    </div>
+
+    <div className="project-card">
+  <h3>Sistema de Estacionamento</h3>
+
+  <p>
+    Sistema desenvolvido em Java para gerenciamento de veículos,
+    vagas e controle de entrada e saída.
+  </p>
+
+  <a
+    href="https://github.com/Ivyna-dev/estacionamento-java"
+    target="_blank"
+    rel="noreferrer"
+    className="project-github-btn"
+  >
+    Ver no GitHub
+  </a>
+</div>
+  </div>
+</section>
+
           <section id="skills" className="skills-section">
   <div className="skills-title">
     <p className="section-label">Habilidades</p>

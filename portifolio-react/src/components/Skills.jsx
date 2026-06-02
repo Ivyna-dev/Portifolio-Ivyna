@@ -1,6 +1,5 @@
 export default function Skills() {
   return (
-    <section id="habilidades" className="skills-section">
     <div className="orbit-scene">
       <div className="orbit-system">
         <span className="orbit-skill skill-1">React</span>
@@ -10,7 +9,7 @@ export default function Skills() {
         <span className="orbit-skill skill-5">CSS</span>
         <span className="orbit-skill skill-6">GitHub</span>
         <span className="orbit-skill skill-7">HTML</span>
-        <span className="orbit-skill skill-8">Canva</span>
+        <span className="orbit-skill skill-8">Bootstrap</span>
       </div>
 
       <div className="center-card">
@@ -20,6 +19,5 @@ export default function Skills() {
         </h3>
       </div>
     </div>
-     </section>
   )
 }
