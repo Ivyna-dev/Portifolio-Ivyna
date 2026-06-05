@@ -1,16 +1,41 @@
-# React + Vite
+# Portfólio Ivyna Sousa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é meu portfólio pessoal desenvolvido com React, com foco em apresentar meus projetos, habilidades e trajetória na área de desenvolvimento front-end e UI Design.
 
-Currently, two official plugins are available:
+O projeto foi criado com uma estética moderna, utilizando animações, fundo estrelado e elementos visuais interativos para transmitir minha identidade como desenvolvedora e designer de interfaces.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologias utilizadas
 
-## React Compiler
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Framer Motion
+- Git e GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the ESLint configuration
+- Página inicial com apresentação profissional
+- Seção sobre mim com card interativo
+- Seção de projetos
+- Seção de habilidades com animação em órbita
+- Fundo animado com partículas
+- Navbar fixa com navegação por seções
+- Layout responsivo
+- Animações e efeitos visuais com CSS e Framer Motion
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estrutura do projeto
+
+```txt
+src/
+├── components/
+│   ├── About.jsx
+│   ├── Hero.jsx
+│   ├── Navbar.jsx
+│   ├── Projects.jsx
+│   ├── Skills.jsx
+│   └── StarBackground.jsx
+├── App.jsx
+├── App.css
+└── main.jsx
